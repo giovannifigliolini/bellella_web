@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Liana';
+    src: local('Liana'), url('assets/font/lianafont/Liana.ttf') format('truetype');
+ }
+ @font-face {
+   font-family: 'norwester';
+   src: local('norwester'), url('assets/font/norwesterfont/norwester.ttf') format('truetype');
+}
+
+ .text-white-liana {
+    color: #fff !important;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    word-spacing: 8px;
+    font-family: Liana;
+  }
+
+  .norwester {
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-family: norwester;
+  }
+
+  .desc-home{
+    position: relative;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+  }

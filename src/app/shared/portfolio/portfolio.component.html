@@ -1,0 +1,48 @@
+<!-- Portfolio Start -->
+<div class="container-fluid py-3 px-0">
+  <div class="container py-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <h1 class="section-title position-relative text-center ">
+          {{ title }}
+        </h1>
+      </div>
+    </div>
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 col-md-5 col-lg-4 d-flex" *ngIf="!tavolo">
+        <a
+        href="assets/pdf/Asporto_varcaturo_2023.pdf" target="_blank"
+          class="btn btn-primary py-md-3 px-md-5 mt-4 norwester ml-auto mr-auto"
+          >Menu asporto</a
+        >
+      </div>
+      <div class="col-12 col-md-8 col-lg-6 d-flex " *ngIf="tavolo">
+        <a
+        href="assets/pdf/Asporto_quarto_2023.pdf" target="_blank"
+          class="btn btn-primary py-md-3 px-md-5 mt-4 mr-md-2 norwester mx-auto"
+          >Menu asporto</a
+        >
+        <a
+        href="assets/pdf/Tavola_quarto_2023.pdf" target="_blank"
+          class="btn btn-primary py-md-3 px-md-5 mt-4 norwester mx-auto"
+          >Menu tavolo</a
+        >
+      </div>
+    </div>
+
+    <div class="row m-0 portfolio-container">
+      <div
+        class="col-lg-4 col-md-6  p-1 portfolio-item first d-md-block"
+        *ngFor="let img of portfolio; let i = index"
+        [ngClass]="{'d-none' : i%2}"
+      >
+        <div class="position-relative overflow-hidden">
+          <img class="img-fluid w-100" src="{{ img.path }}" alt="" />
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+  <!-- Portfolio End -->
+</div>

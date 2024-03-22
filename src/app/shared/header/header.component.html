@@ -1,0 +1,77 @@
+<!-- Topbar Start -->
+<div class="container-fluid bg-primary py-3 d-none d-lg-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 text-center text-lg-left mb-2 mb-lg-0">
+        <div class="d-inline-flex align-items-center">
+          <img routerLink="/" class="logo" src="assets/img/logo.png" alt="Image" />
+        </div>
+      </div>
+      <div class="col-md-6 text-center mb-2 mb-lg-0">
+        <span class="text-white-liana" id="test"
+          >Si stat' o primm ammor...</span
+        >
+      </div>
+      <div class="col-md-3 text-center text-lg-right">
+        <div class="d-inline-flex align-items-center">
+          <a
+            class="text-secondary px-3"
+            href="https://www.facebook.com/BellellaPizzeriaNapoletana"
+            target="_blank"
+            title="Vai alla pagina instagram"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            class="text-secondary px-3"
+            href="https://www.instagram.com/bellellapizzerianapoletana/"
+            target="_blank"
+            title="Vai alla pagina instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Topbar End -->
+
+<!-- Navbar Start -->
+<div class="container-fluid position-relative nav-bar p-0">
+  <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9">
+    <nav
+      class="navbar custom-navbar navbar-expand-lg navbar-light shadow p-lg-0"
+    >
+      <a routerLink="/" class="navbar-brand d-block d-lg-none">
+        <img class="logo" src="assets/img/logo.png" alt="Image" />
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler navbar-dark"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-between"
+        id="navbarCollapse"
+      >
+        <div class="navbar-nav ml-auto py-0">
+          <a routerLink="home" routerLinkActive="active" class="nav-item nav-link norwester">Home</a>
+          <a routerLink="chi-siamo" routerLinkActive="active" class="nav-item nav-link norwester norwester">Chi siamo</a>
+        </div>
+        <a routerLink="home" class="navbar-brand mx-5 d-none d-lg-block">
+          <img class="pizza" src="assets/img/Pizza.png" alt="Image" />
+        </a>
+        <div class="navbar-nav mr-auto py-0">
+            <a routerLink="menu" routerLinkActive="active"
+            class="nav-item nav-link norwester">Menu'</a>
+          <a routerLink="contatti" routerLinkActive="active" class="nav-item nav-link norwester">Sedi</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- Navbar End -->

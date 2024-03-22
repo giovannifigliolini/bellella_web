@@ -1,0 +1,163 @@
+<div class="container-fluid py-5">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="section-title position-relative text-center mb-5 norwester">
+          Raccontiamo napoli attraverso la pizza
+        </h1>
+      </div>
+    </div>
+    <div class="row"> 
+      <div class="col-lg-5 desc-home d-flex">
+        <p class="my-lg-auto my-3">{{ descrizione1 }}</p>
+      </div>
+      <div class="col-lg-7" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto1.jpg"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+    </div>
+    
+    <div class="py-5 d-none d-md-block"></div>
+
+    <div class="row">
+      <!-- web -->
+      <div class="col-lg-7 d-none d-md-block" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto2.jpg"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-lg-5 desc-home d-lg-flex d-none d-md-block">
+        <p class="my-auto">{{ descrizione2 }}</p>
+      </div>
+
+      <!-- mobile -->
+      <div class="col-lg-5 desc-home d-md-none">
+        <p class="my-3">{{ descrizione2 }}</p>
+      </div>
+      <div class="col-lg-7 d-md-none" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto2.jpg"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="py-5 d-none d-md-block"></div>
+
+    <div class="row">
+      <div class="col-lg-5 desc-home d-flex">
+        <p class="my-lg-auto my-3">{{ descrizione3 }}</p>
+      </div>
+      <div class="col-lg-7" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto4.jpg"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+    </div>
+    
+    <div class="py-5 d-none d-md-block"></div>
+
+    <div class="row">
+      <!-- web -->
+      <div class="col-lg-7 d-none d-md-block" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto5.jpg"
+            style="object-fit: cover"
+          />
+        </div> 
+      </div>
+      <div class="col-lg-5 desc-home d-lg-flex d-none d-md-block">
+        <p class="my-auto">{{ descrizione4 }}</p>
+      </div>
+
+      <!-- mobile -->
+      <div class="col-lg-5 desc-home d-md-none">
+        <p class="my-3">{{ descrizione4 }}</p>
+      </div>
+      <div class="col-lg-7 d-md-none" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto5.jpg"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="py-5 d-none d-md-block"></div>
+
+    <div class="row">
+      <div class="col-lg-5 desc-home d-flex">
+        <p class="my-lg-auto my-3">{{ descrizione5 }}</p>
+      </div>
+      <div class="col-lg-7" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto6.jpg"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+    </div>
+    
+    <div class="py-5 d-none d-md-block"></div>
+
+    <div class="row">
+      <!-- web -->
+      <div class="col-lg-7 d-none d-md-block" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto8_web.png"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+      <div class="col-lg-5 desc-home d-lg-flex d-none d-md-block">
+        <p class="my-auto">{{ descrizione6 }}</p>
+      </div>
+
+      <!-- mobile -->
+      <div class="col-lg-5 desc-home d-md-none">
+        <p class="my-3">{{ descrizione6 }}</p>
+      </div>
+      <div class="col-lg-7 d-md-none" style="min-height: 400px">
+        <div class="position-relative h-100 rounded overflow-hidden">
+          <img
+            class="position-absolute w-100 h-100"
+            src="assets/img/home/foto8.jpg"
+            style="object-fit: cover"
+          />
+        </div>
+      </div>
+      
+    </div>
+
+      <div class="col-lg-4 py-3"></div>
+      <div class="text-center" *ngIf="isVisible">
+        <a routerLink="/chi-siamo" class="btn btn-primary mt-2 norwester">Chi siamo</a>
+      </div>
+  </div>
+</div>
