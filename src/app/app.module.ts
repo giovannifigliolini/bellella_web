@@ -10,6 +10,8 @@ import { ChiSiamoComponent } from './chi-siamo/chi-siamo.component';
 import { ContattiComponent } from './contatti/contatti.component';
 import { PolicyComponent } from './policy/policy.component';
 import { MenuComponent } from './menu/menu.component';
+import { PizzeriaComponent } from './pizzeria/pizzeria.component';
+import { TrattoriaComponent } from './trattoria/trattoria.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MenuComponent } from './menu/menu.component';
     ChiSiamoComponent,
     ContattiComponent,
     PolicyComponent,
-    MenuComponent
+    MenuComponent,
+    PizzeriaComponent,
+    TrattoriaComponent
   ],
   imports: [
     BrowserModule,

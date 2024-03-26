@@ -5,6 +5,8 @@ import { ContattiComponent } from './contatti/contatti.component';
 import { HomeComponent } from './home/home.component';
 import { PolicyComponent } from './policy/policy.component';
 import { MenuComponent } from './menu/menu.component';
+import { PizzeriaComponent } from './pizzeria/pizzeria.component';
+import { TrattoriaComponent } from './trattoria/trattoria.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,14 @@ const routes: Routes = [
   {
     path: 'menu',
     component: MenuComponent
+  },
+  {
+    path: 'pizzeria',
+    component: PizzeriaComponent
+  },
+  {
+    path: 'trattoria',
+    component: TrattoriaComponent
   }
 ];
 
