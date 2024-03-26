@@ -4,7 +4,12 @@
     <div class="row">
       <div class="col-md-3 text-center text-lg-left mb-2 mb-lg-0">
         <div class="d-inline-flex align-items-center">
-          <img routerLink="/" class="logo" src="assets/img/logo.png" alt="Image" />
+          <img
+            routerLink="/"
+            class="logo"
+            src="assets/img/logo.png"
+            alt="Image"
+          />
         </div>
       </div>
       <div class="col-md-6 text-center mb-2 mb-lg-0">
@@ -42,6 +47,7 @@
   <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9">
     <nav
       class="navbar custom-navbar navbar-expand-lg navbar-light shadow p-lg-0"
+      [class.invisible]="!showMenu"
     >
       <a routerLink="/" class="navbar-brand d-block d-lg-none">
         <img class="logo" src="assets/img/logo.png" alt="Image" />
@@ -59,16 +65,35 @@
         id="navbarCollapse"
       >
         <div class="navbar-nav ml-auto py-0">
-          <a routerLink="home" routerLinkActive="active" class="nav-item nav-link norwester">Home</a>
-          <a routerLink="chi-siamo" routerLinkActive="active" class="nav-item nav-link norwester norwester">Chi siamo</a>
+          <a
+            routerLink="home"
+            routerLinkActive="active"
+            class="nav-item nav-link norwester"
+            >Home</a
+          >
+          <a
+            routerLink="chi-siamo"
+            routerLinkActive="active"
+            class="nav-item nav-link norwester norwester"
+            >Chi siamo</a
+          >
         </div>
         <a routerLink="home" class="navbar-brand mx-5 d-none d-lg-block">
           <img class="pizza" src="assets/img/Pizza.png" alt="Image" />
         </a>
         <div class="navbar-nav mr-auto py-0">
-            <a routerLink="menu" routerLinkActive="active"
-            class="nav-item nav-link norwester">Menu'</a>
-          <a routerLink="contatti" routerLinkActive="active" class="nav-item nav-link norwester">Sedi</a>
+          <a
+            routerLink="menu"
+            routerLinkActive="active"
+            class="nav-item nav-link norwester"
+            >Menu'</a
+          >
+          <a
+            routerLink="contatti"
+            routerLinkActive="active"
+            class="nav-item nav-link norwester"
+            >Sedi</a
+          >
         </div>
       </div>
     </nav>

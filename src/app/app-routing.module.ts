@@ -9,10 +9,7 @@ import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
 
 const routes: Routes = [
-  {
-    path:'',
-    component: HomeComponent
-  },
+  
   {
     path: 'home',
     component: HomeComponent
@@ -40,7 +37,11 @@ const routes: Routes = [
   {
     path: 'trattoria',
     component: TrattoriaComponent
-  }
+  },
+  {
+    path:'',
+    component: HomeComponent
+  },
 ];
 
 @NgModule({
