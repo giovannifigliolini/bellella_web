@@ -11,25 +11,10 @@
       <div class="col-12">
         <blockquote class="blockquote">
           <p class="mb-3 desc-home">
-            Siete pronti ad entrare in un mondo di Napoletanità e Qualità?
-            Asstatv e facitne salute! Bellella Trattoria Napoletana nasce dalla
-            Passione per la cucina antica Napoletana e dal Fascino dei vicoli di
-            Napoli. Bellella è progettata con un Design caratteristico dei bassi
-            napoletani, pronti a coccolarvi in un' atmosfera calda e
-            accogliente. La nostra è la tipica cucina della Domenica a casa
-            della Nonna, dalla Genovese al Ragù, dalla Polpetta alla Parmigiana,
-            serviti nei famosi pentolini di rame. BELLELLA vi aspetta tutti i
-            giorni nei suoi locali, a pranzo come a cena.
+            {{descrizione1}}
           </p>
           <footer class="blockquote-footer">
-            SCUGNIZZO (O' scugnizz') La parola "scugnizzo" indica, dalla fine
-            dell'Ottocento, il «monello di strada» napoletano, è un termine
-            della lingua napoletana, poi entrato nell'uso anche in italiano. Gli
-            scugnizzi sono bambini nati e cresciuti nei vicoli dei quartieri,
-            spesso senza famiglia, fuggiti dagli orfanotrofi e dai collegi,
-            ragazzi astuti, intelligenti e vivaci, disposti ad «arrangiarsi» con
-            espedienti anche scarsamente onesti perché la vita, in strada, è
-            fatta di espedienti e sopravvivenza.
+            {{descrizione1foot}}
             <!-- <cite title="Source Title">Source Title</cite> -->
           </footer>
         </blockquote>
@@ -45,24 +30,12 @@
     <div class="row mt-5">
       <div class="col-lg-5 desc-home d-flex">
         <p class="my-lg-auto my-3">
-          Bellella Pizzeria Napoletana ® nasce dall'idea di due giovani
-          pizzaioli napoletani, Giorgio Riccio e Raffaele Marigliano. Dopo anni
-          di gavetta ed esperienze maturate fin dalla giovane età, decidono di
-          aprire la prima sede di Bellella in provincia di Napoli a Quarto del
-          2021. Qui fin dal primo momento si evince la volontà di fondere
-          Tradizione e Innovazione in ogni loro proposta. Nel 2022 dato il forte
-          successo e la grande affluenza nella prima sede, il progetto si
-          espande nella nuova sede "take away" di Varcaturo dove diventa
-          possibile assaporare tutto il mondo Bellella direttamente a casa.
+          {{descrizione2}}
         </p>
       </div>
       <div class="col-lg-7" style="min-height: 400px">
         <div class="position-relative h-100 rounded overflow-hidden">
-          <img
-            class="position-absolute w-100 h-100"
-            src="assets/img/home/foto1.jpg"
-            style="object-fit: cover"
-          />
+          <img class="position-absolute w-100 h-100" src="assets/img/trattoria/foto1.jpg" style="object-fit: cover" />
         </div>
       </div>
     </div>
@@ -70,19 +43,12 @@
     <div class="row mt-5">
       <div class="col-lg-7 d-none d-md-block" style="min-height: 400px">
         <div class="position-relative h-100 rounded overflow-hidden">
-          <img
-            class="position-absolute w-100 h-100"
-            src="assets/img/home/foto5.jpg"
-            style="object-fit: cover"
-          />
+          <img class="position-absolute w-100 h-100" src="assets/img/trattoria/foto2.jpg" style="object-fit: cover" />
         </div>
       </div>
       <div class="col-lg-5 desc-home d-lg-flex d-none d-md-block">
         <p class="my-auto">
-          Una location calda e accogliente,in vero stile Napoletano. Il progetto
-          si sviluppa anche nel mito di tante celebrità del panorama napoletano,
-          che accompagnano ogni angolo del locale, richiamando più volte il
-          carattere partenopeo della pizzeria.
+          {{descrizione3}}
         </p>
       </div>
     </div>
@@ -96,11 +62,8 @@
     </div>
 
     <div class="row mt-5">
-      <div
-        class="col-lg-4 col-md-6 p-1 portfolio-item first d-md-block"
-        *ngFor="let img of portfolio; let i = index"
-        [ngClass]="{ 'd-none': i % 2 }"
-      >
+      <div class="col-lg-4 col-md-6 p-1 portfolio-item first d-md-block" *ngFor="let img of portfolio; let i = index"
+        [ngClass]="{ 'd-none': i % 2 }">
         <div class="position-relative overflow-hidden">
           <img class="img-fluid w-100" src="{{ img.path }}" alt="" />
         </div>
@@ -122,31 +85,34 @@
       </div>
 
       <div class="col-6">
-       <div class="row">
-        <div class="col-6 mb-5">
-          <span class="font-weight-bold">Dove siamo</span
-          ><i class="fa fa-map-marker-alt ml-1 mr-3"></i>
-          <hr>
-          <span>via giuseppe mazzini 41, NA</span>
+        <div class="row">
+          <div class="col-6 mb-5">
+            <span class="font-weight-bold">Dove siamo</span><i class="fa fa-map-marker-alt ml-1 mr-3"></i>
+            <hr>
+            <span>Corso Italia 65, Quarto, NA</span>
+          </div>
+          <div class="col-6 mb-5">
+            <span class="font-weight-bold">Telefono</span><i class="fa fa-phone-alt ml-1 mr-3"></i>
+            <hr>
+            <span>376 202 4412</span>
+          </div>
+          <div class="col-6 mb-5">
+            <span class="font-weight-bold">Giorni</span><i class="fa fa-calendar-day ml-1 mr-3"></i>
+            <hr>
+            <span>Lunedì - Sabato</span>
+            <hr>
+            <span>Domenica</span>
+          </div>
+          <div class="col-6 mb-5">
+            <span class="font-weight-bold">Orari</span><i class="fa fa-clock ml-1 mr-3"></i>
+            <hr>
+            <span>10.30 – 15.00 / 18.30 - 00.30</span>
+            <hr>
+            <span>10.30 - 17.00</span>
+          </div>
         </div>
-        <div class="col-6 mb-5">
-          <span class="font-weight-bold">Telefono</span
-          ><i class="fa fa-phone-alt ml-1 mr-3"></i> <hr>
-          <span>081 1878 9054</span>
-        </div>
-        <div class="col-6 mb-5">
-          <span class="font-weight-bold">Orari</span
-          ><i class="fa fa-clock ml-1 mr-3"></i> <hr>
-          <span>1.30 – 14.45 / 18.30 - 23.30</span>
-        </div>
-        <div class="col-6 mb-5">
-          <span class="font-weight-bold">Giorni</span
-          ><i class="fa fa-calendar-day ml-1 mr-3"></i> <hr>
-          <span>dal Lunedi alla Domenica.</span>
-        </div>
-       </div>
       </div>
-      
+
     </div>
   </div>
 </div>
