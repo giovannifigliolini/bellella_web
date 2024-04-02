@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './chi-siamo.component.html',
   styleUrls: ['./chi-siamo.component.scss']
 })
-export class ChiSiamoComponent implements OnInit {
+export class ChiSiamoComponent {
 
   titolo = "I nostri piatti piu' richiesti";
   titoloHeader="La nostra storia";
@@ -36,12 +36,6 @@ export class ChiSiamoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    window.scrollTo({
-      behavior: "smooth",
-      top: 0,
-      left: 0
-    })
-  }
+
 
 }

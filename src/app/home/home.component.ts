@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   immagini = [
     {
@@ -24,12 +24,5 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    window.scrollTo({
-      behavior: "smooth",
-      top: 0,
-      left: 0
-    })
-  }
 
 }

@@ -7,6 +7,7 @@ import { PolicyComponent } from './policy/policy.component';
 import { MenuComponent } from './menu/menu.component';
 import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
+import { features } from 'process';
 
 const routes: Routes = [
   
@@ -45,7 +46,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration : 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

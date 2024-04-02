@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent{
   titoloHeader = "I nostri menu'";
   paginaHeader = "Menu'";
 
@@ -53,11 +53,4 @@ export class MenuComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: 0,
-      left: 0,
-    });
-  }
 }
