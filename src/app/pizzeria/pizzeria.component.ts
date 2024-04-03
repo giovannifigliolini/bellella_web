@@ -28,7 +28,7 @@ export class PizzeriaComponent implements OnInit {
     },
   ];
 
-  descrizione1 = `Bellella è il frutto dell'idea di due giovani ragazzi, Raffaele Marigliano e Giorgio Riccio, che hanno voluto coniugare la bellezza e la bontà della nostra terra. Situata in un'atmosfera calda e accogliente, ispirata alla Napoli antica, qui potrai trascorrere i momenti migliori in tutta tranquillità e spensieratezza. Il nostro team ti accoglierà sempre con il sorriso, sia a pranzo che a cena.`;
+  descrizione1 = `Siete pronti ad immergervi nel cuore pulsante della vera tradizione napoletana? Benvenuti alla nostra Pizzeria Napoletana, dove la passione per l'autentica pizza napoletana si fonde con l'atmosfera vivace delle strade di Napoli. Con un design che evoca l'essenza dei quartieri storici della città, la nostra pizzeria vi accoglie con un calore familiare e un'ospitalità senza pari. Qui, potrete gustare le classiche pizze napoletane, preparate con cura secondo le ricette tramandate di generazione in generazione. Con le nostre pizze ogni morso vi trasporterà direttamente nelle strade di Napoli.`;
 
   descrizione2 = `Bellella Pizzeria Napoletana ® offre una Pizza Contemporanea realizzata con una selezione accurata di grano e un blend di farine di TIPO “0” e TIPO “1”. La nostra lievitazione, che va dalle 24 alle 36 ore, assicura un prodotto estremamente digeribile, soffice e leggero. Un continuo omaggio al territorio napoletano tramite i suoi prodotti e le sue tradizioni, reinterpretate in chiave moderna.`;
 
