@@ -9,6 +9,7 @@ import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
 import { features } from 'process';
 import { NewsComponent } from './news/news.component';
+import { PrenotaComponent } from './prenota/prenota.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'news',
     component: NewsComponent,
+  },
+  {
+    path: 'prenota',
+    component: PrenotaComponent,
   },
   {
     path: '',
