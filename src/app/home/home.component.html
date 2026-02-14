@@ -104,58 +104,72 @@
 
 <!-- Pizzeria e trattoria con animazioni -->
 <div class="container-fluid overflow-hidden">
-  <div class="row my-5 d-flex flex-column mx-3">
-      <h2 class="section-title position-relative text-center mb-5 norwester ">
-        Bellella - Pizzeria Napoletana
-      </h2>
-    <div
-      class="desc-home d-flex flex-sm-column flex-md-row justify-content-between align-items-center"
+  <!-- PIZZERIA -->
+  <div class="row my-5 mx-3">
+    <h2
+      class="section-title position-relative text-center mb-5 norwester w-100"
     >
-      <img
-        class="card-img-top rounded-circle animate-from-left"
-        style="width: 20rem; height: auto"
-        src="assets/img/pizzeria/card2.jpeg"
-      />
+      Bellella - Pizzeria Napoletana
+    </h2>
 
-      <p class="my-lg-auto my-3 px-3 animate-from-bottom">
-        {{ descrizionePizzeria }}
-      </p>
+    <div class="desc-home row align-items-center text-center text-md-start">
+      <div class="col-12 col-md-4 mb-3 mb-md-0">
+        <img
+          class="img-fluid rounded-circle animate-from-left"
+          src="assets/img/pizzeria/card2.jpeg"
+        />
+      </div>
 
-      <img
-        class="card-img-top rounded-circle animate-from-right"
-        style="width: 20rem; height: auto"
-        src="assets/img/pizzeria/card2.jpeg"
-      />
+      <div class="col-12 col-md-4">
+        <p class="px-3 animate-from-bottom">
+          {{ descrizionePizzeria }}
+        </p>
+      </div>
+
+      <div class="col-12 col-md-4 mt-3 mt-md-0">
+        <img
+          class="img-fluid rounded-circle animate-from-right"
+          src="assets/img/pizzeria/card2.jpeg"
+        />
+      </div>
     </div>
   </div>
-  <div class="row my-5 flex-column mx-3">
-      <h2 class="section-title position-relative text-center mb-5 norwester">
-        Bellella - Trattoria Napoletana
-      </h2>
-    <div
-      class="desc-home d-flex justify-content-between align-items-center"
+
+  <!-- TRATTORIA -->
+  <div class="row my-5 mx-3">
+    <h2
+      class="section-title position-relative text-center mb-5 norwester w-100"
     >
-      <p class="my-lg-auto my-3 px-3 animate-from-left">
-        {{ descrizionePizzeria }}
-      </p>
-      <img
-        class="animate-from-right"
-        style="width: 40rem; height: auto"
-        src="assets/img/trattoria/foto2.jpg"
-      />
+      Bellella - Trattoria Napoletana
+    </h2>
+
+    <div class="desc-home row align-items-center text-center text-md-start">
+      <div class="col-12 col-md-6 order-2 order-md-1">
+        <p class="px-3 animate-from-left">
+          {{ descrizionePizzeria }}
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 order-1 order-md-2 mb-3 mb-md-0">
+        <img
+          class="img-fluid animate-from-right"
+          src="assets/img/trattoria/foto2.jpg"
+        />
+      </div>
     </div>
   </div>
 </div>
+
 <!-- Pizzeria e trattoria con animazioni -->
 
 <!-- Feedback -->
 <div class="container-fluid mb-3">
   <div class="row">
-      <div class="col-lg-12">
-        <h2 class="section-title position-relative text-center mb-5 norwester">
-          Cosa dicono di noi
-        </h2>
-      </div>
+    <div class="col-lg-12">
+      <h2 class="section-title position-relative text-center mb-5 norwester">
+        Cosa dicono di noi
+      </h2>
+    </div>
     <div class="col-lg-4" *ngFor="let feedback of [1, 2, 3]">
       <div class="card">
         <div class="card-body text-center">
