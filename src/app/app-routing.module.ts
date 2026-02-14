@@ -8,47 +8,53 @@ import { MenuComponent } from './menu/menu.component';
 import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
 import { features } from 'process';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
-  
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'chi-siamo',
-    component: ChiSiamoComponent
+    component: ChiSiamoComponent,
   },
   {
     path: 'contatti',
-    component: ContattiComponent
+    component: ContattiComponent,
   },
   {
     path: 'policy',
-    component: PolicyComponent
+    component: PolicyComponent,
   },
   {
     path: 'menu',
-    component: MenuComponent
+    component: MenuComponent,
   },
   {
     path: 'pizzeria',
-    component: PizzeriaComponent
+    component: PizzeriaComponent,
   },
   {
     path: 'trattoria',
-    component: TrattoriaComponent
+    component: TrattoriaComponent,
   },
   {
-    path:'',
-    component: HomeComponent
+    path: 'news',
+    component: NewsComponent,
+  },
+  {
+    path: '',
+    component: HomeComponent,
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration : 'enabled'
-  })],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

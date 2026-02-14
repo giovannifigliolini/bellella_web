@@ -12,6 +12,8 @@ import { PolicyComponent } from './policy/policy.component';
 import { MenuComponent } from './menu/menu.component';
 import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
+import { NewsComponent } from './news/news.component';
+import { PrenotaComponent } from './prenota/prenota.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { TrattoriaComponent } from './trattoria/trattoria.component';
     PolicyComponent,
     MenuComponent,
     PizzeriaComponent,
-    TrattoriaComponent
+    TrattoriaComponent,
+    NewsComponent,
+    PrenotaComponent
   ],
   imports: [
     BrowserModule,

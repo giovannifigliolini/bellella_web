@@ -1,0 +1,54 @@
+<div class="container my-3">
+  <!-- Header -->
+  <div class="row mt-5">
+    <div class="col-12 text-center">
+      <h1
+        class="section-title position-relative text-center mb-5 norwester w-100"
+      >
+        {{ titoloPagina }}
+      </h1>
+      <p class="text-muted para-desc mx-auto mb-0">
+        {{ descrizionePagina }}
+      </p>
+    </div>
+  </div>
+  <!-- Header -->
+
+  <!-- start cards -->
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mt-4 pt-2" *ngFor="let item of news">
+      <!-- card -->
+      <div class="blog-post rounded border">
+        <!-- IMG -->
+        <div class="blog-img d-block overflow-hidden position-relative">
+          <img
+            src="https://www.bootdey.com/image/350x280/FF7F50/000000"
+            class="img-fluid rounded-top"
+            alt=""
+          />
+          <div class="overlay rounded-top bg-dark"></div>
+        </div>
+        <div class="content p-3">
+          <!-- data -->
+          <small class="text-muted p float-right">{{ item.date }}</small>
+          <!-- Badge -->
+          <small>{{ item.type }}</small>
+          <!-- Link title -->
+          <h4 class="mt-2">
+            <a
+              [routerLink]="['/news', item.type, item.id]"
+              class="text-dark title"
+              >{{ item.title }}</a
+            >
+          </h4>
+          <!-- Description -->
+          <p class="text-muted mt-2">
+            {{ item.description }}
+          </p>
+        </div>
+      </div>
+      <!-- end card -->
+    </div>
+  </div>
+  <!-- end cards -->
+</div>
