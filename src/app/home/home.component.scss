@@ -18,3 +18,31 @@
     object-fit: cover;
   }
 }
+
+
+/* Stato iniziale */
+.animate-from-left,
+.animate-from-right,
+.animate-from-bottom {
+  opacity: 0;
+  transition: all 0.9s ease-out;
+}
+
+/* Direzioni */
+.animate-from-left {
+  transform: translateX(-80px);
+}
+
+.animate-from-right {
+  transform: translateX(80px);
+}
+
+.animate-from-bottom {
+  transform: translateY(80px);
+}
+
+/* Stato finale */
+.animate-show {
+  opacity: 1;
+  transform: translate(0, 0);
+}

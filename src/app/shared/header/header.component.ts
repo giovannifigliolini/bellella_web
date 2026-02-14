@@ -9,30 +9,30 @@ import { Subscription, filter, map, tap } from 'rxjs';
 })
 export class HeaderComponent implements OnDestroy {
 
-  showMenu = false;
+  showMenu = true;
 
-  sub: Subscription
+  // sub: Subscription
 
   constructor(private router: Router) {
-    this.sub = this.router.events
-      .pipe(
-        filter(event => event instanceof NavigationStart),
-        map(event => event as NavigationStart),  // appease typescript
-      )
-      .subscribe(
-        event => {
-          if (event.url === '/home' || event.url === '/')
-            this.showMenu = false;
-          else
-            this.showMenu = true;
+    // this.sub = this.router.events
+    //   .pipe(
+    //     filter(event => event instanceof NavigationStart),
+    //     map(event => event as NavigationStart),  // appease typescript
+    //   )
+    //   .subscribe(
+    //     event => {
+    //       if (event.url === '/home' || event.url === '/')
+    //         this.showMenu = false;
+    //       else
+    //         this.showMenu = true;
 
-        }
-      );
+    //     }
+    //   );
   }
 
 
   ngOnDestroy(): void {
-    this.sub.unsubscribe();
+    // this.sub.unsubscribe();
   }
 
 }
