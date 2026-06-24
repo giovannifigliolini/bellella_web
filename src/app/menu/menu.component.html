@@ -1,10 +1,89 @@
 <app-photo-header
-  [titolo]="this.titoloHeader"
-  [pagina]="this.paginaHeader"
+  [titolo]="titoloHeader"
+  [pagina]="paginaHeader"
 ></app-photo-header>
 
-<app-portfolio [title]="'Quarto'" [portfolio]="quarto" [tavolo]="true"></app-portfolio>
+<div class="container-fluid py-5">
+  <div class="container">
 
-<app-portfolio [title]="'Varcaturo - Take Away'" [portfolio]="varcaturo"></app-portfolio>
+    <div class="row mt-3 mb-5">
+      <div class="col-12">
+        <h2 class="section-title position-relative text-center mb-3 norwester">
+          Scegli il tuo menu'
+        </h2>
+        <p class="text-center desc-home">
+          Consulta i nostri menù e scegli cosa ti stuzzica di più!
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+      <!-- Menù Pizzeria -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <a
+          href="assets/pdf/new_menu/Bellella%20Pizzeria_Menu%20Giugno%2026-NOPREZZI.pdf"
+          target="_blank"
+          rel="noopener"
+          class="menu-card-link text-decoration-none"
+        >
+          <div class="card menu-card border-0 shadow text-center h-100">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center py-5 px-4">
+              <i class="fa fa-fire fa-4x text-primary mb-4"></i>
+              <h3 class="card-title norwester mb-2">Menu' Pizzeria</h3>
+              <p class="text-muted mb-4">Le nostre pizze napoletane, impasto a lunga lievitazione</p>
+              <span class="btn btn-primary norwester px-4">
+                Menu' Pizzeria <i class="fa fa-external-link-alt ml-2"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Menù Trattoria -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <a
+          href="assets/pdf/new_menu/menu-TRATTORIA-02-NOPREZZO.pdf"
+          target="_blank"
+          rel="noopener"
+          class="menu-card-link text-decoration-none"
+        >
+          <div class="card menu-card border-0 shadow text-center h-100">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center py-5 px-4">
+              <i class="fa fa-utensils fa-4x text-primary mb-4"></i>
+              <h3 class="card-title norwester mb-2">Menu' Trattoria</h3>
+              <p class="text-muted mb-4">Primi, secondi e dolci della tradizione napoletana</p>
+              <span class="btn btn-primary norwester px-4">
+                Menu' Trattoria <i class="fa fa-external-link-alt ml-2"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Menù Asporto -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <a
+          href="assets/pdf/new_menu/Bellella%20Pizzeria_Menu-Asporto.pdf"
+          target="_blank"
+          rel="noopener"
+          class="menu-card-link text-decoration-none"
+        >
+          <div class="card menu-card border-0 shadow text-center h-100">
+            <div class="card-body d-flex flex-column align-items-center justify-content-center py-5 px-4">
+              <i class="fa fa-shopping-bag fa-4x text-primary mb-4"></i>
+              <h3 class="card-title norwester mb-2">Menu' Asporto</h3>
+              <p class="text-muted mb-4">Porta a casa il gusto di Bellella — pizze e sfizi da asporto</p>
+              <span class="btn btn-primary norwester px-4">
+                Menu' Asporto <i class="fa fa-external-link-alt ml-2"></i>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <app-vesuvio></app-vesuvio>

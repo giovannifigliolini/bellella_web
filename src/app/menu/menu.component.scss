@@ -1,0 +1,17 @@
+.menu-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+  min-height: 280px;
+  border-radius: 12px !important;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(170, 25, 23, 0.18) !important;
+  }
+}
+
+.menu-card-link {
+  display: block;
+  height: 100%;
+  color: inherit;
+}

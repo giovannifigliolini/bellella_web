@@ -16,10 +16,10 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
-  {
-    path: 'chi-siamo',
-    component: ChiSiamoComponent,
-  },
+  // {
+  //   path: 'chi-siamo',
+  //   component: ChiSiamoComponent,
+  // },
   {
     path: 'contatti',
     component: ContattiComponent,
