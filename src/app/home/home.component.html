@@ -21,8 +21,15 @@
   </div>
 </div> -->
 
+<!-- Video Hero - solo mobile -->
+<div class="d-md-none mb-5">
+  <video #mobileVideo class="w-100 d-block" autoplay playsinline loop controls [muted]="true">
+    <source src="assets/video/video_bellella.mp4" type="video/mp4" />
+  </video>
+</div>
+
 <!-- Carousel Start -->
-<div class="container-fluid p-0 mb-5" id="hero">
+<div class="container-fluid p-0 mb-5 d-none d-md-block" id="hero">
   <div id="header-carousel" class="carousel h-100" data-ride="carousel">
     <div class="carousel-inner h-100">
       <img

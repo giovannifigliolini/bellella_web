@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef } from '@angular/core';
 import { homePizzeriaDescrizione } from './home.config';
 
 @Component({
@@ -26,9 +26,10 @@ export class HomeComponent implements AfterViewInit {
   ]
 
 
-   constructor(private el: ElementRef) {}
 
-ngAfterViewInit(): void {
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit(): void {
   const elements = document.querySelectorAll(
     '.animate-from-left, .animate-from-right, .animate-from-bottom'
   );
