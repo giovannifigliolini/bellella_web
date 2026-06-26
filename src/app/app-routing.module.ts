@@ -7,9 +7,10 @@ import { PolicyComponent } from './policy/policy.component';
 import { MenuComponent } from './menu/menu.component';
 import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
-import { features } from 'process';
 import { NewsComponent } from './news/news.component';
 import { PrenotaComponent } from './prenota/prenota.component';
+import { RecensioniComponent } from './recensioni/recensioni.component';
+import { FotoComponent } from './foto/foto.component';
 
 const routes: Routes = [
   {
@@ -20,10 +21,10 @@ const routes: Routes = [
   //   path: 'chi-siamo',
   //   component: ChiSiamoComponent,
   // },
-  {
-    path: 'contatti',
-    component: ContattiComponent,
-  },
+  // {
+  //   path: 'contatti',
+  //   component: ContattiComponent,
+  // },
   {
     path: 'policy',
     component: PolicyComponent,
@@ -32,14 +33,14 @@ const routes: Routes = [
     path: 'menu',
     component: MenuComponent,
   },
-  {
-    path: 'pizzeria',
-    component: PizzeriaComponent,
-  },
-  {
-    path: 'trattoria',
-    component: TrattoriaComponent,
-  },
+  // {
+  //   path: 'pizzeria',
+  //   component: PizzeriaComponent,
+  // },
+  // {
+  //   path: 'trattoria',
+  //   component: TrattoriaComponent,
+  // },
   {
     path: 'news',
     component: NewsComponent,
@@ -47,6 +48,14 @@ const routes: Routes = [
   {
     path: 'prenota',
     component: PrenotaComponent,
+  },
+  {
+    path: 'recensioni',
+    component: RecensioniComponent,
+  },
+  {
+    path: 'foto',
+    component: FotoComponent,
   },
   {
     path: '',

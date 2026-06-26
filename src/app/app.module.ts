@@ -14,6 +14,8 @@ import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
 import { NewsComponent } from './news/news.component';
 import { PrenotaComponent } from './prenota/prenota.component';
+import { RecensioniComponent } from './recensioni/recensioni.component';
+import { FotoComponent } from './foto/foto.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { PrenotaComponent } from './prenota/prenota.component';
     PizzeriaComponent,
     TrattoriaComponent,
     NewsComponent,
-    PrenotaComponent
+    PrenotaComponent,
+    RecensioniComponent,
+    FotoComponent,
   ],
   imports: [
     BrowserModule,

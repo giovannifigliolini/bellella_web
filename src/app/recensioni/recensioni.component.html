@@ -1,0 +1,152 @@
+<app-photo-header
+  [titolo]="titoloHeader"
+  [pagina]="paginaHeader"
+></app-photo-header>
+
+<div class="container-fluid py-5">
+  <div class="container">
+
+    <!-- ===== PIZZERIA ===== -->
+    <div class="row mt-3 mb-4">
+      <div class="col-12 text-center">
+        <h2 class="section-title position-relative text-center mb-2 norwester">
+          Bellella - Pizzeria
+        </h2>
+        <p class="desc-home text-center mb-5">
+          Cosa dicono i nostri ospiti della pizzeria napoletana
+        </p>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div
+        *ngFor="let r of recensioniPizzeria"
+        class="col-12 col-md-6 col-lg-4 mb-4"
+      >
+        <div class="recensione-card h-100">
+          <div class="quote-icon">
+            <i class="fa fa-quote-left"></i>
+          </div>
+          <p class="recensione-testo">{{ r.testo }}</p>
+          <div class="stelle mb-2">
+            <i *ngFor="let s of starsArray(r.stelle)" class="fa fa-star"></i>
+          </div>
+          <div class="d-flex align-items-center mt-auto pt-3">
+            <div class="avatar mr-3">{{ r.iniziali }}</div>
+            <div>
+              <span class="font-weight-bold norwester">Cliente verificato</span><br />
+              <small class="text-muted">{{ r.data }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Pizzeria -->
+    <div class="row justify-content-center mb-5 pb-4 border-bottom">
+      <div class="col-12 col-md-auto mb-3 mb-md-0 mr-md-3">
+        <a
+          [href]="TA_PIZZERIA_WRITE_URL"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary norwester w-100 px-4 py-2"
+        >
+          <i class="fa fa-pen mr-2"></i> Scrivi su TripAdvisor
+        </a>
+      </div>
+      <div class="col-12 col-md-auto mb-3 mb-md-0 mr-md-3">
+        <a
+          [href]="TA_PIZZERIA_URL"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline-primary norwester w-100 px-4 py-2"
+        >
+          <i class="fa fa-external-link-alt mr-2"></i> Leggi su TripAdvisor
+        </a>
+      </div>
+      <div class="col-12 col-md-auto">
+        <a
+          [href]="GOOGLE_PIZZERIA_URL"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline-primary norwester w-100 px-4 py-2"
+        >
+          <i class="fab fa-google mr-2"></i> Cerca su Google
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== TRATTORIA ===== -->
+    <div class="row mt-5 mb-4">
+      <div class="col-12 text-center">
+        <h2 class="section-title position-relative text-center mb-2 norwester">
+          Bellella - Trattoria
+        </h2>
+        <p class="desc-home text-center mb-5">
+          Cosa dicono i nostri ospiti della trattoria napoletana
+        </p>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div
+        *ngFor="let r of recensioniTrattoria"
+        class="col-12 col-md-6 col-lg-4 mb-4"
+      >
+        <div class="recensione-card h-100">
+          <div class="quote-icon">
+            <i class="fa fa-quote-left"></i>
+          </div>
+          <p class="recensione-testo">{{ r.testo }}</p>
+          <div class="stelle mb-2">
+            <i *ngFor="let s of starsArray(r.stelle)" class="fa fa-star"></i>
+          </div>
+          <div class="d-flex align-items-center mt-auto pt-3">
+            <div class="avatar mr-3">{{ r.iniziali }}</div>
+            <div>
+              <span class="font-weight-bold norwester">Cliente verificato</span><br />
+              <small class="text-muted">{{ r.data }}</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Trattoria -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 col-md-auto mb-3 mb-md-0 mr-md-3">
+        <a
+          [href]="TA_TRATTORIA_WRITE_URL"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary norwester w-100 px-4 py-2"
+        >
+          <i class="fa fa-pen mr-2"></i> Scrivi su TripAdvisor
+        </a>
+      </div>
+      <div class="col-12 col-md-auto mb-3 mb-md-0 mr-md-3">
+        <a
+          [href]="TA_TRATTORIA_URL"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline-primary norwester w-100 px-4 py-2"
+        >
+          <i class="fa fa-external-link-alt mr-2"></i> Leggi su TripAdvisor
+        </a>
+      </div>
+      <div class="col-12 col-md-auto">
+        <a
+          [href]="GOOGLE_TRATTORIA_URL"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-outline-primary norwester w-100 px-4 py-2"
+        >
+          <i class="fab fa-google mr-2"></i> Cerca su Google
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-vesuvio></app-vesuvio>
