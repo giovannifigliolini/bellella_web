@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prenota.component.scss']
 })
 export class PrenotaComponent implements OnInit {
+  titoloHeader = 'Prenota';
+  paginaHeader = 'Prenota';
 
   constructor() { }
 

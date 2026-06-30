@@ -7,6 +7,8 @@ import { title } from 'process';
   styleUrls: ['./news.component.scss'],
 })
 export class NewsComponent implements OnInit {
+  titoloHeader = 'News';
+  paginaHeader = 'News';
   titoloPagina = 'News';
   descrizionePagina =
     "Non perdere le ultime novità di Bellella, dai nuovi piatti in menu alle iniziative speciali. Resta aggiornato sulle nostre offerte e scopri cosa c'è di nuovo da noi!";

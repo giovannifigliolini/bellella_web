@@ -12,7 +12,66 @@
         </h2>
       </div>
     </div>
+
+    <div class="gallery-grid" aria-label="Galleria fotografica Bellella">
+      <button
+        type="button"
+        class="gallery-item"
+        *ngFor="let image of galleryImages; let i = index"
+        (click)="openGallery(i)"
+        [attr.aria-label]="'Apri la foto ' + (i + 1)"
+        [title]="image.alt"
+      >
+        <img
+          [src]="image.src"
+          alt="Foto della galleria"
+          [title]="image.alt"
+          loading="lazy"
+          decoding="async"
+          width="400"
+          height="300"
+        />
+      </button>
+    </div>
   </div>
 </div>
 
-<app-vesuvio></app-vesuvio>
+<div class="lightbox-backdrop" *ngIf="selectedImage" (click)="closeGallery()" (keydown.escape)="closeGallery()">
+  <div class="lightbox" (click)="$event.stopPropagation()" (keydown.escape)="closeGallery()" role="dialog" aria-modal="true" aria-label="Visualizzazione foto">
+    <button
+      type="button"
+      class="lightbox-close"
+      (click)="closeGallery()"
+      aria-label="Chiudi galleria"
+    >
+      &times;
+    </button>
+
+    <button
+      type="button"
+      class="lightbox-nav prev"
+      (click)="previousImage()"
+      aria-label="Foto precedente"
+    >
+      <span aria-hidden="true">&#10094;</span>
+    </button>
+
+    <img
+      [src]="selectedImage?.src || ''"
+      alt="Foto della galleria"
+      [title]="selectedImage?.alt || ''"
+      class="lightbox-image"
+      loading="eager"
+      decoding="async"
+    />
+
+    <button
+      type="button"
+      class="lightbox-nav next"
+      (click)="nextImage()"
+      aria-label="Foto successiva"
+    >
+      <span aria-hidden="true">&#10095;</span>
+    </button>
+  </div>
+</div>
