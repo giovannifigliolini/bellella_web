@@ -3,42 +3,25 @@
   [pagina]="paginaHeader"
 ></app-photo-header>
 
-<div class="container my-3">
-  <!-- start cards -->
-  <div class="row">
-    <div class="col-lg-4 col-md-6 mt-4 pt-2" *ngFor="let item of news">
-      <!-- card -->
-      <div class="blog-post rounded border">
-        <!-- IMG -->
-        <div class="blog-img d-block overflow-hidden position-relative">
-          <img
-            src="https://www.bootdey.com/image/350x280/FF7F50/000000"
-            class="img-fluid rounded-top"
-            alt=""
-          />
-          <div class="overlay rounded-top bg-dark"></div>
-        </div>
-        <div class="content p-3">
-          <!-- data -->
-          <small class="text-muted p float-right">{{ item.date }}</small>
-          <!-- Badge -->
-          <small>{{ item.type }}</small>
-          <!-- Link title -->
-          <h4 class="mt-2">
-            <a
-              [routerLink]="['/news', item.type, item.id]"
-              class="text-dark title"
-              >{{ item.title }}</a
-            >
-          </h4>
-          <!-- Description -->
-          <p class="text-muted mt-2">
-            {{ item.description }}
-          </p>
-        </div>
-      </div>
-      <!-- end card -->
+<div class="container my-5 news-hero">
+  <div class="news-layout">
+    <div class="news-image-wrapper">
+      <img
+        src="assets/img/render_locale.jpeg"
+        class="news-main-image"
+        alt="Nuova apertura Bellella a Quarto"
+      />
+    </div>
+
+    <div class="news-text-block">
+      <p class="news-description">
+        Stiamo lavorando a una nuova apertura nel comune di Quarto, un progetto pensato per portare una nuova esperienza di gusto e convivialità sul territorio. La pizzeria sarà un ambiente accogliente e curato, con una sala ampia da 120 posti a sedere, ideale per cene in famiglia, uscite con gli amici e momenti da condividere all’insegna della buona cucina.
+      </p>
+      <p class="news-description">
+        Siamo entusiasti di poter presto accogliere i nostri clienti in uno spazio nuovo, moderno e confortevole, dove tradizione, qualità degli ingredienti e passione per la pizza si incontrano per offrire un’esperienza autentica e piacevole.
+      </p>
     </div>
   </div>
-  <!-- end cards -->
 </div>
+
+<app-vesuvio></app-vesuvio>

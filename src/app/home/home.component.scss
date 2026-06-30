@@ -7,18 +7,20 @@
   font-size: 2rem;
 }
 
-
+:host ::ng-deep app-photo-header,
+:host ::ng-deep app-vesuvio {
+  display: none !important;
+}
 
 @media only screen and (max-width: 575.98px) {
   #hero {
     height: 500px;
   }
 
-  img{
+  img {
     object-fit: cover;
   }
 }
-
 
 /* Stato iniziale */
 .animate-from-left,
