@@ -1,26 +1,66 @@
-<app-photo-header
+﻿<app-photo-header
   [titolo]="titoloHeader"
   [pagina]="paginaHeader"
 ></app-photo-header>
 
-<div class="container my-5 news-hero">
-  <div class="news-layout">
-    <div class="news-image-wrapper">
-      <img
-        src="assets/img/render_locale.jpeg"
-        class="news-main-image"
-        alt="Nuova apertura Bellella a Quarto"
-      />
-    </div>
+<div class="container my-5 news-page">
+  <div class="row">
+    <aside class="col-lg-3 mb-4">
+      <div class="news-filter-card p-4 rounded shadow-sm bg-white">
+        <h4 class="filter-title">Categorie</h4>
+        <ul class="list-unstyled categories-list">
+          <li *ngFor="let category of categories">
+            <button
+              type="button"
+              class="category-btn btn btn-link text-left w-100"
+              [class.active]="category === selectedCategory"
+              (click)="filterByCategory(category)"
+            >
+              {{ category }}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </aside>
 
-    <div class="news-text-block">
-      <p class="news-description">
-        Stiamo lavorando a una nuova apertura nel comune di Quarto, un progetto pensato per portare una nuova esperienza di gusto e convivialità sul territorio. La pizzeria sarà un ambiente accogliente e curato, con una sala ampia da 120 posti a sedere, ideale per cene in famiglia, uscite con gli amici e momenti da condividere all’insegna della buona cucina.
-      </p>
-      <p class="news-description">
-        Siamo entusiasti di poter presto accogliere i nostri clienti in uno spazio nuovo, moderno e confortevole, dove tradizione, qualità degli ingredienti e passione per la pizza si incontrano per offrire un’esperienza autentica e piacevole.
-      </p>
-    </div>
+    <section class="col-lg-9">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center mb-4">
+        <div>
+          <h1 class="news-title">{{ titoloPagina }} 
+            <span class="badge badge-secondary category-badge">{{ selectedCategory }}</span>
+          </h1>
+          
+          <p class="text-muted">{{ descrizionePagina }}</p>
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-4" *ngFor="let item of filteredNews">
+          <article class="news-card card h-100 border-0 shadow-sm">
+            <img
+              [src]="item.images[0]"
+              [alt]="item.title"
+              [title]="item.title"
+              class="card-img-top"
+            />
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="badge badge-secondary">{{ item.category }}</span>
+                <small class="text-muted">{{ item.date }}</small>
+              </div>
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text flex-grow-1">{{ item.teaser }}</p>
+              <a [routerLink]="['/news', item.id]" class="btn btn-outline-primary norwester btn-sm mt-3">Leggi di piu'</a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div *ngIf="filteredNews.length === 0" class="alert alert-info">
+        Nessuna news trovata per la categoria selezionata.
+      </div>
+    </section>
   </div>
 </div>
 

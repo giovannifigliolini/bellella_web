@@ -2671,12 +2671,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary:hover {
-  color: #212529;
+  color: #fff;
   background-color:var(--primary);
   border-color:var(--primary);
 }
 
 .btn-outline-primary:focus, .btn-outline-primary.focus {
+  color: #fff;
   box-shadow: 0 0 0 0.2rem rgba(241, 149, 178, 0.5);
 }
 

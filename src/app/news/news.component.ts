@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { title } from 'process';
+import { NewsItem, NewsService } from './news.service';
 
 @Component({
   selector: 'app-news',
@@ -13,19 +13,24 @@ export class NewsComponent implements OnInit {
   descrizionePagina =
     "Non perdere le ultime novità di Bellella, dai nuovi piatti in menu alle iniziative speciali. Resta aggiornato sulle nostre offerte e scopri cosa c'è di nuovo da noi!";
 
-  news: any = [
-    {
-      title: 'Card title 1',
-      type: 'New',
-      date: '19th Oct, 19',
-      description:
-        'Some quick example text to build on the card title and make up the bulk of the card content.',
-      image: 'assets/images/news/01.jpg',
-      id: 1,
-    },
-  ];
+  categories: string[] = [];
+  selectedCategory = 'All';
+  allNews: NewsItem[] = [];
+  filteredNews: NewsItem[] = [];
 
-  constructor() {}
+  constructor(private newsService: NewsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.allNews = this.newsService.getAll();
+    this.categories = this.newsService.getCategories();
+    this.filterByCategory('All');
+  }
+
+  filterByCategory(category: string): void {
+    this.selectedCategory = category;
+    this.filteredNews =
+      category === 'All'
+        ? this.allNews
+        : this.allNews.filter((item) => item.category === category);
+  }
 }

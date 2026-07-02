@@ -13,6 +13,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
 import { NewsComponent } from './news/news.component';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { PrenotaComponent } from './prenota/prenota.component';
 import { RecensioniComponent } from './recensioni/recensioni.component';
 import { FotoComponent } from './foto/foto.component';
@@ -28,6 +29,7 @@ import { FotoComponent } from './foto/foto.component';
     PizzeriaComponent,
     TrattoriaComponent,
     NewsComponent,
+    NewsDetailComponent,
     PrenotaComponent,
     RecensioniComponent,
     FotoComponent,

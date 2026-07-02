@@ -24,7 +24,7 @@ export class FotoComponent {
     { src: 'assets/img/pizzeria/pizza_2.jpg', alt: 'Pizze e birre' },
     { src: 'assets/img/pizzeria/pizza_3.jpg', alt: 'Pizza e pomodoro' },
     { src: 'assets/img/pizzeria/pizza_4.jpg', alt: 'Basilico fresco' },
-    { src: 'assets/img/quartieri_1.jpg', alt: 'Quartieri' },
+    { src: 'assets/img/pizzeria/pizza_5.jpg', alt: 'Pizza margherita e Basilico' },
   ];
 
   selectedIndex: number | null = null;

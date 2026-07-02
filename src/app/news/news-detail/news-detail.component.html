@@ -1,0 +1,95 @@
+<div class="container my-5 news-detail">
+  <div *ngIf="news; else notFound">
+    <div class="row">
+      <div class="col-12">
+        <div class="detail-header mb-4">
+          <h1 class="detail-title">{{ news.title }}</h1>
+          <div class="detail-meta">
+            <span class="detail-category">{{ news.category }}</span>
+            <span class="detail-date">{{ news.date }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 mb-4 detail-media" *ngIf="news.images.length">
+        <ng-container *ngIf="news.images.length === 1; else multiImage">
+          <div class="single-image">
+            <img
+              class="img-fluid rounded"
+              [src]="news.images[0]"
+              alt="{{ news.title }}"
+              title="{{ news.title }}"
+            />
+          </div>
+        </ng-container>
+
+        <ng-template #multiImage>
+          <div class="carousel-wrapper">
+            <div class="carousel-image">
+              <img
+                class="img-fluid rounded"
+                [src]="activeImage"
+                alt="{{ 'Foto ' + (currentImageIndex + 1) + ' di ' + news.title }}"
+                title="{{ 'Foto ' + (currentImageIndex + 1) + ' di ' + news.title }}"
+              />
+            </div>
+
+            <div class="carousel-controls">
+              <button
+                type="button"
+                class="carousel-button"
+                aria-label="Immagine precedente"
+                title="Immagine precedente"
+                (click)="showPrevious()"
+              >
+                ‹
+              </button>
+              <button
+                type="button"
+                class="carousel-button"
+                aria-label="Immagine successiva"
+                title="Immagine successiva"
+                (click)="showNext()"
+              >
+                ›
+              </button>
+            </div>
+
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                *ngFor="let image of news.images; let idx = index"
+                class="carousel-indicator"
+                [class.active]="idx === currentImageIndex"
+                (click)="selectImage(idx)"
+                [attr.title]="'Vai all immagine ' + (idx + 1)"
+                [attr.aria-label]="'Vai all immagine ' + (idx + 1)"
+              >
+              </button>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="detail-content" [innerHTML]="news.contentHtml"></div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12">
+        <a routerLink="/news" class="btn btn-outline-primary norwester">Torna alle news</a>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #notFound>
+    <div class="alert alert-warning">
+      News non trovata. <a routerLink="/news">Torna all’elenco delle news</a>
+    </div>
+  </ng-template>
+</div>

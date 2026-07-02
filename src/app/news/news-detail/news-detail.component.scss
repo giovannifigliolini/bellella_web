@@ -1,0 +1,129 @@
+﻿.news-detail {
+  margin-top: 2rem;
+}
+
+.detail-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-title {
+  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+  margin-bottom: 0;
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+
+.detail-category,
+.detail-date {
+  display: inline-flex;
+  align-items: center;
+}
+
+.detail-media {
+  max-width: 100%;
+}
+
+.single-image img,
+.carousel-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.08);
+}
+
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.carousel-button {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  border: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.carousel-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  border: none;
+  background: #dee2e6;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.carousel-indicator.active {
+  background: #0d6efd;
+  transform: scale(1.15);
+}
+
+.detail-content {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.detail-content p {
+  margin-bottom: 1rem;
+}
+
+.detail-content ul,
+.detail-content ol {
+  margin: 1rem 0;
+  padding-left: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .detail-header {
+    gap: 0.5rem;
+  }
+
+  .carousel-button {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 1.25rem;
+  }
+}

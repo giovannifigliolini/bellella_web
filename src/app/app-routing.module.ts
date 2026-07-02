@@ -8,6 +8,7 @@ import { MenuComponent } from './menu/menu.component';
 import { PizzeriaComponent } from './pizzeria/pizzeria.component';
 import { TrattoriaComponent } from './trattoria/trattoria.component';
 import { NewsComponent } from './news/news.component';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { PrenotaComponent } from './prenota/prenota.component';
 import { RecensioniComponent } from './recensioni/recensioni.component';
 import { FotoComponent } from './foto/foto.component';
@@ -41,6 +42,10 @@ const routes: Routes = [
   //   path: 'trattoria',
   //   component: TrattoriaComponent,
   // },
+  {
+    path: 'news/:id',
+    component: NewsDetailComponent,
+  },
   {
     path: 'news',
     component: NewsComponent,

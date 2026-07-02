@@ -27,3 +27,41 @@
     letter-spacing: 2px;
     word-spacing: 4px;
   }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .container-fluid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .btn {
+    word-break: break-word;
+  }
+
+  .news-card img.card-img-top {
+    height: auto;
+    min-height: 180px;
+  }
+
+  @media (max-width: 767.98px) {
+    .container,
+    .container-fluid {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
