@@ -22,10 +22,13 @@
 </div> -->
 
 <!-- Video Hero - solo mobile -->
-<div class="d-md-none mb-5">
+<div class="d-md-none mb-5 position-relative">
   <video #mobileVideo class="w-100 d-block" autoplay playsinline loop controls [muted]="true">
     <source src="assets/video/video_bellella.mp4" type="video/mp4" />
   </video>
+  <div class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center" style="top: 0; left: 0; z-index: 2;">
+    <a routerLink="/prenota" class="btn btn-primary bg-white text-primary py-2 px-4 norwester">Prenota Ora</a>
+  </div>
 </div>
 
 <!-- Carousel Start -->
